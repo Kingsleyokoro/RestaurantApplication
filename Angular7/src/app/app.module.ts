@@ -13,13 +13,17 @@ import { OrdersComponent } from './orders/orders.component';
 import { OrderComponent } from './orders/order/order.component';
 import { OrderItemsComponent } from './orders/order-items/order-items.component';
 import { OrderService } from './shared/order.service';
+import { MyNavComponent } from './my-nav/my-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
     OrderComponent,
-    OrderItemsComponent
+    OrderItemsComponent,
+    MyNavComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,13 @@ import { OrderService } from './shared/order.service';
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   entryComponents:[OrderItemsComponent],
   providers: [OrderService],
